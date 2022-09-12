@@ -1,5 +1,4 @@
 package Stack;
-
 public class MyQueue {
     public   INode head;
     public   INode tail;
@@ -11,6 +10,19 @@ public class MyQueue {
             INode temp = head;
             head = myNode;
             head.setNext(temp);
+        }
+    }
+    public void  peek(){
+      INode temp =head;
+      head=temp.getNext();
+      head.setNext(temp);
+      System.out.println(temp.getData());
+    }
+    public void pop(){
+        if (head == null) {
+            System.out.println("List is Empty");
+        } else {
+           head=head.getNext();
         }
     }
     public void display(){
