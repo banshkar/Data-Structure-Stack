@@ -10,7 +10,9 @@ public class StackList<T>{
         list.add(mySecondNode);
         list.add(myFirstNode);
         list.add(myFirstNode1);
+        list.peek();
         list.display();
-
+        list.pop();
+        list.display();
     }
 }

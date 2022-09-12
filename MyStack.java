@@ -11,6 +11,20 @@ public class MyStack {
             tail.setNext(myNode);
            tail=myNode;
         }
+    }  public void  peek(){
+        INode temp =tail;
+        head.setData(temp);
+        System.out.println(temp.getData());
+    }
+    public void pop(){
+        if (head == null) {
+            System.out.println("List is Empty");
+        } else {
+            INode currentNode = head;
+
+            currentNode = currentNode.getNext();
+            currentNode.setNext(null);
+        }
     }
     public void display(){
         INode currentNode=head;
